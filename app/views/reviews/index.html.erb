@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Reviews</h1>
+  <%= <% @reviews.each do |review| %>
+  <h4>Rating: <%= review.rating %></h4>
+  <p><%= review.content %></p>
+  <% end %>
+
+</div>

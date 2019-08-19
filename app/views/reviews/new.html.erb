@@ -1,0 +1,25 @@
+<div class="container">
+
+  <h1>Create a new Review</h1>
+
+  <%= simple_form_for [@cocktail, @review] do |f| %>
+
+  <% if @review.errors.any? %>
+      <div class="errors-container">
+        <ul>
+          <% @review.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <%= f.input :description %>
+  <%= f.input :rating %>
+  <%= f.submit "Add review", class: "btn btn-primary" %>
+
+  <% end %>
+</div>
+
+<!-- Add the 1-5 rating in form and also in the model
+then do the controller create action-->
